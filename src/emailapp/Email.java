@@ -20,7 +20,7 @@ public class Email {
 		this.lastName = lastName;
 		System.out.println("EMAIL: " + this.firstName + " " + this.lastName);
 		
-		this.department = setDepartment();
+		this.department = setDepartmentSuffix();
 		
 		System.out.println("Department: " + this.department);
 		
@@ -33,18 +33,18 @@ public class Email {
 	}
 
 	// Ask for the department
-	private String setDepartment() {
+	private String setDepartmentSuffix() {
 		System.out.print("Enter the department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none ");
 		Scanner in = new Scanner(System.in);
 		int departmentChoice = in.nextInt();
 		in.close();
 		switch(departmentChoice) {
 		case 1: 
-			return "sales";
+			return "sales.";
 		case 2:
-			return "dev";
+			return "dev.";
 		case 3:
-			return "acct";
+			return "acct.";
 		default:
 			return "";
 		}
@@ -64,7 +64,7 @@ public class Email {
 	//generate e-mail address
 	private String generateEmail(){
 		String email;
-		email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
+		email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySuffix;
 		return email;
 	}
 
