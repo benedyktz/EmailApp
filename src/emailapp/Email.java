@@ -73,8 +73,11 @@ public class Email {
 	public void setMailboxCapacity(int mailboxCapacity) {
 		this.mailboxCapacity = mailboxCapacity;
 	}
-	
+
 	// Set the alternate Email
+	public void setAlternateEmail(String alternateEmail) {
+		this.alternateEmail = alternateEmail;
+	}
 	
 	// Change the password
 
