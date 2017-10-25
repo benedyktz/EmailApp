@@ -18,18 +18,12 @@ public class Email {
 	public Email(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		System.out.println("EMAIL: " + this.firstName + " " + this.lastName);
 		
 		this.department = setDepartmentSuffix();
 		
-		System.out.println("Department: " + this.department);
-		
 		this.password = generatePassword(defaultPasswordLength);
 		
-		System.out.println("Password: " + this.password);
-		
 		this.email = generateEmail();
-		System.out.println("Email: " + this.email);
 	}
 
 	// Ask for the department
