@@ -68,17 +68,28 @@ public class Email {
 		return email;
 	}
 
-	
-	// Set the mailbox capacity
 	public void setMailboxCapacity(int mailboxCapacity) {
 		this.mailboxCapacity = mailboxCapacity;
 	}
 
-	// Set the alternate Email
 	public void setAlternateEmail(String alternateEmail) {
 		this.alternateEmail = alternateEmail;
 	}
 	
-	// Change the password
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public int getMailboxCapacity() {
+		return mailboxCapacity;
+	}
+
+	public String getAlternateEmail() {
+		return alternateEmail;
+	}
+	
 }
