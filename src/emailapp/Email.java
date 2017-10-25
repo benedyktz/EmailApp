@@ -92,4 +92,13 @@ public class Email {
 		return alternateEmail;
 	}
 	
+	public String showInfo() {
+		return "Display Name: " + firstName + " " + lastName +
+				"\nCompany Email: " + email + 
+				"\nPassword: " + password + 
+				"\nMailbox Capacity [MB]: " + mailboxCapacity +
+				"\nAlternate Email: " + alternateEmail;
+	}
+	
+	
 }
