@@ -8,6 +8,8 @@ public class Email {
 	private String lastName;
 	private String password;
 	private String department;
+	private String email;
+	private String companySuffix = "company.com";
 	private int mailboxCapacity;
 	private int defaultPasswordLength = 10;
 	private String alternateEmail;
@@ -25,6 +27,9 @@ public class Email {
 		this.password = generatePassword(defaultPasswordLength);
 		
 		System.out.println("Password: " + this.password);
+		
+		this.email = generateEmail();
+		System.out.println("Email: " + this.email);
 	}
 
 	// Ask for the department
@@ -54,6 +59,13 @@ public class Email {
 			password[i] = passwordSet.charAt(randomNumber);
 		}
 		return new String(password);
+	}
+	
+	//generate e-mail address
+	private String generateEmail(){
+		String email;
+		email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
+		return email;
 	}
 	
 	// Set the mailbox capacity
