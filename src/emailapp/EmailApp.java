@@ -8,7 +8,8 @@ public class EmailApp {
 		
 		email1.setMailboxCapacity(100);
 		
-		System.out.println(email1.showInfo());
+		email1.setAlternateEmail("bz@bz.pl");
 		
+		System.out.println(email1.showInfo());
 	}
 }
